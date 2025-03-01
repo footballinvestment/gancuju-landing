@@ -1,0 +1,255 @@
+/* GānCuju™️©️ - Responsive styles */
+
+/* Basic responsive settings */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile phones (portrait) */
+@media screen and (max-width: 576px) {
+  /* Essential modifications only */
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .navbar-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: block;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .navbar-nav.active {
+    right: 0;
+  }
+
+  /* Language selector position adjustment on mobile */
+  .language-selector {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+  }
+
+  /* Hero section modification on mobile */
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  /* Competition section adjustments */
+  .competition-content {
+    flex-direction: column;
+  }
+
+  .competition-features {
+    gap: 15px;
+  }
+
+  .feature {
+    min-width: 100%;
+  }
+
+  /* Training system adjustments */
+  .level-pyramid {
+    padding: 0 15px;
+  }
+
+  /* Science section adjustments */
+  .reflex-comparison {
+    flex-direction: column;
+  }
+
+  .reflex-type {
+    margin-bottom: 20px;
+  }
+
+  .training-progression .progression-steps {
+    flex-direction: column;
+  }
+
+  .step {
+    width: 100%;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+
+  /* Philosophy cards adjustments */
+  .philosophy-cards {
+    gap: 15px;
+  }
+
+  /* Product slider modifications */
+  .product-slide {
+    flex-direction: column;
+  }
+
+  .product-image {
+    margin-bottom: 20px;
+  }
+
+  .ganball-features {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Contact form mobile adjustment */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  /* Language selector adjustment on tablets */
+  .language-selector {
+    top: 15px;
+    right: 60px;
+  }
+
+  /* Product slider tablet view */
+  .product-image {
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  /* Competition features adjustments */
+  .competition-features {
+    gap: 20px;
+  }
+
+  .feature {
+    min-width: 45%;
+  }
+
+  /* Training system adjustments */
+  .level-pyramid {
+    padding: 0 20px;
+  }
+
+  /* Science section adjustments */
+  .reflex-comparison {
+    gap: 15px;
+  }
+
+  .progression-steps {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    width: 45%;
+    margin-bottom: 15px;
+  }
+
+  /* Footer adjustments */
+  .footer-links {
+    gap: 30px;
+  }
+}
+
+/* Laptops and larger screens */
+@media screen and (min-width: 992px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .hero-scroll,
+  .cta-button,
+  .video-placeholder,
+  .tabs-nav,
+  .contact-form,
+  .social-links,
+  .back-to-top,
+  .language-selector,
+  .competition-features,
+  .level-pyramid,
+  .training-progression,
+  .philosophy-cards {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 20pt;
+  }
+}

@@ -1,0 +1,757 @@
+// Elérhető nyelvek
+const languages = {
+  hu: "Magyar",
+  en: "English",
+  cn: "中文",
+  de: "Deutsch",
+};
+
+// Fordítások
+const translations = {
+  hu: {
+    nav_home: "Kezdőlap",
+    nav_about: "Rólunk",
+    nav_mission: "Küldetésünk",
+    nav_features: "Jellemzők",
+    nav_philosophy: "Filozófia",
+    nav_contact: "Kapcsolat",
+    title: "Egy ősi sportág újjászületése",
+    subtitle: "Több mint 4 ezer éves futball tudás és kultúra",
+    cta_button: "Csatlakozz most!",
+    about_title: "A GānCuju™️©️ Legenda",
+    about_p1:
+      'A GānCuju™️©️ Legenda szerint a Cuju előtt egy egyszerűbb eszközzel játszották a "labdarúgást" az ókori Kínában. A GānCuju™️©️ a köznép játéka volt.',
+    about_p2:
+      "Az ókori Kína társadalma alapvetően vidéki volt. A kínai családok túlnyomó többsége kis gazdálkodó falvakban élt.",
+    about_feature1: "minél kisebb helyet foglaljon",
+    about_feature2: "könnyen hordozható legyen",
+    about_feature3: "robosztus és strapabíró legyen",
+    mission_title: "Küldetésünk",
+    mission_p1:
+      "A GānCuju™️©️ egy olyan filozófia, mely átível időn és kultúrákon át és összeköti az embereket a sporton keresztül.",
+    mission_p2:
+      "Célunk a kínai kultúra és nyelv népszerűsítése a sporton keresztül.",
+    counter_years: "Év történelem",
+    counter_variations: "Sporteszköz variáció",
+    counter_levels: "Képzési szint",
+    features_title: "Miért a GānCuju™️©️?",
+    feature1_title: "Játékban verhetetlen",
+    feature1_text:
+      "A GānCuju™️© kis területen játszott nagy intenzitású, képesség és készségfejlesztő játék.",
+    feature2_title: "Egy játék mindenkinek",
+    feature2_text:
+      "A GānCuju™️© sokszínűsége miatt mindenki sikeres lehet a játék valamelyik változatában.",
+    feature3_title: "Bőrérzékelés fejlesztése",
+    feature3_text:
+      "A bőrérzékelés fejlesztése révén olyan reflexeket építhetünk ki, amelyek sokkal gyorsabbak és biztosabbak.",
+    feature4_title: "Mindennapi testmozgás",
+    feature4_text:
+      "A játék a gyerekek nevelésére is szolgál, erősíti az önbizalmat, játékosan ösztönöz.",
+    philosophy_title: "A GānCuju™️©️ Filozófia",
+    philosophy_subtitle:
+      "Etikett szabályok és játékszabályzok, amik az élet egyéb területein is segítik az érvényesülést",
+    philosophy1_title: "Tiszteletadás",
+    philosophy1_text:
+      "A kínai kultúrában nagyon fontos a tiszteletadás. A köszönésnél fontos a kézfogás, a meghajlás és a szemkontaktus is.",
+    philosophy2_title: "Együttműködés",
+    philosophy2_text:
+      "A Cuju a kínai kultúrában az együttműködés és az összetartás szimbóluma.",
+    contact_title: "Legyél részese a GānCuju™️©️ közösségnek!",
+    contact_subtitle:
+      "Csatlakozz hozzánk és ismerd meg ezt az izgalmas sportot!",
+    contact_info: "Kapcsolat",
+    contact_address: "1234 Budapest, Példa utca 123.",
+    contact_name: "Név",
+    contact_email: "Email cím",
+    contact_phone: "Telefonszám",
+    contact_subject: "Téma",
+    contact_message: "Üzenet",
+    contact_send: "Küldés",
+    contact_thank:
+      "Köszönjük a megkeresést, {name}! Hamarosan felvesszük Önnel a kapcsolatot.",
+    footer_copyright: "Minden jog fenntartva",
+    footer_privacy: "Adatvédelmi irányelvek",
+    footer_terms: "Felhasználási feltételek",
+    // Új fordítások a további tartalmakhoz
+    about_full_p1: "A GānCuju™️©️ Legenda szerint a Cuju előtt egy egyszerűbb eszközzel játszották a \"labdarúgást\" az ókori Kínában. A GānCuju™️©️ a köznép játéka volt, miközben a császári palotákban rendelkezésre álltak Cuju pályák és hatalmas fallal körülvett biztonságos, védett nagy terek.",
+    about_full_p2: "Az ókori Kína társadalma alapvetően vidéki volt. A kínai családok túlnyomó többsége kis gazdálkodó falvakban élt, ahol a vadállatok miatt a gyerekeknek a faluban vagy annak határában kellett játszaniuk. Ezért a sporteszköz kialakításakor az alábbi irányelvek voltak meghatározóak:",
+    about_full_p3: "Erre a legjobb megoldást a kínai bambusz szolgáltatta. A bambusz rugalmassága és szilárdsága tökéletesen szimbolizálta a GānCuju™️©️ szellemiségét: hajlékony, de ellenálló, éppúgy, ahogyan a játékosok is megtanultak alkalmazkodni a különböző helyzetekhez, miközben megőrizték saját erősségeiket.",
+    image_alt_about: "GānCuju történeti kép",
+    image_overlay_title: "Ősi hagyomány",
+    image_overlay_text: "Több mint 4000 éves múlt",
+    mission_full_p1: "A GānCuju™️©️ egy olyan filozófia, mely átível időn és kultúrákon át és összeköti az embereket a sporton keresztül. Célunk a kínai kultúra és nyelv népszerűsítése a sporton keresztül, valamint a hagyományos kínai sportjáték megismertetése széles körben.",
+    mission_full_p2: "Tudjuk, hogy az általunk megalkotott koncepció az egész világon ismertté és vonzóvá fogja tenni a Cuju-t a különböző sport eseményeinken, továbbképzéseinken és versenyeinken. Ezek a játékok nemcsak szórakoztatóak, hanem segítenek megőrizni és továbbadni az ősi kínai futball hagyományokat a következő generációk számára.",
+    video_alt: "GānCuju bemutató",
+    feature1_full_p1: "A GānCuju™️© kis területen játszott nagy intenzitású, képesség és készségfejlesztő játék. A pályán minden lépésnek megfontoltnak kell lennie, mert egy rossz mozdulattal az ellenfél könnyedén kihasználhatja a hibánkat.",
+    feature1_full_p2: "A játék során a stratégia és a gyors döntéshozatal a legfontosabbak. Csak azoknak sikerülhet győzedelmeskedni, akik képesek azonnal felismerni az ellenfél gyengeségeit és kihasználni azokat. A győzelem édes ízét csak azok érezhetik, akik kitartóak és nem adják fel könnyen.",
+    feature2_full_p1: "A GānCuju™️© sokszínűsége miatt mindenki sikeres lehet a játék valamelyik változatában. Ez hihetetlen önbizalmat ad az élet más területeire is, és segít a személyes konfliktusok békés rendezésében.",
+    feature2_full_p2: "Az emberek, akik a játékban megtapasztalták saját képességeik értékét, magabiztosabban és konstruktívabban tudták kezelni a személyes konfliktusokat is. A játék során megtanulták, hogy a különböző képességeket és stratégiákat összehangolva lehet csak sikert elérni.",
+    feature3_full_p1: "A bőrérzékelés fejlesztése révén olyan reflexeket építhetünk ki, amelyek ellentétben a látáson alapuló reakciókkal, nem igénylik a nagyagykéreg részvételét az ingerületi folyamatban, ily módon sokkal gyorsabbak és biztosabbak lesznek.",
+    feature3_full_p2: "Az érintésen alapuló reflexekben többféle receptor vesz részt. A \"bőrérzék\", azaz a bőr érzéksejtjei jelzik, hogy testünk melyik részét és milyen erővel éri a labda, az izom – és ínorsók segítségével pedig képesek vagyunk meghatározni az érkező labda irányát és sebességét.",
+    feature4_full_p1: "A játék a gyerekek nevelésére is szolgált, hiszen minden szülő felelős a saját gyermeke nevelésében, ennek elmulasztása hosszútávon káros hatással van a társadalomra. Azokat a családokat ahol nem volt hagyomány a GānCuju™️© azokat közössége megvetette.",
+    feature4_full_p2: "Ez az ősi kínai játék fejlesztette a kéz- és láb technikát, erősítette az önbizalmat, játékosan ösztönzött, kitartásra és önuralomra tanított. A Gānball™️ segítségével a játékosok élményekkel gazdagodnak, fejlesztik technikai készségeiket és javítják játékuk minőségét.",
+    philosophy_card_click: "Kattints a kártyára",
+    philosophy_card3_title: "Stratégia",
+    philosophy_card3_text: "A játék során a stratégia és a gyors döntéshozatal a legfontosabbak. Csak azoknak sikerülhet győzedelmeskedni, akik képesek azonnal felismerni az ellenfél gyengeségeit és kihasználni azokat.",
+    philosophy_card4_title: "Közösségi élmény",
+    philosophy_card4_text: "A GānCuju™️©️ nem csak egy nagyszerű játék, hanem egy kulturális élmény és egy lehetőség arra, hogy közelebbről megismerjük az ősi Kína futballtörténetét.",
+    products_title: "GānCuju™️© Termékcsalád",
+    product1_title: "GānCuju™️©️ Versenysport",
+    product1_text: "Az ősi kínai labdarúgás modern adaptációja. Saját nemzetközi versenyek és bajnokságok szervezése.",
+    product2_title: "Gānball™️ Sporteszköz",
+    product2_text: "A moduláris sporteszköz 34 különböző eszközzé alakítható. Innovatív technológiai megoldások.",
+    product3_title: "Lion Football Academy",
+    product3_text: "Teljes képzési rendszer 8 szintű licensz rendszerrel. Education Center képzési központ.",
+    product4_title: "Ganball Games™️",
+    product4_text: "Rekreációs szolgáltatások. Különböző sportágak adaptációi: Tennis, Röplabda, Golf, Badminton.",
+    product_details: "Részletek",
+    contact_full_subtitle: "Csatlakozz hozzánk és ismerd meg ezt az izgalmas sportot, amely ötvözi a hagyományt és a modern technológiát!",
+    contact_phone_number: "+36 12 345 6789",
+    contact_email_address: "info@gancuju.hu",
+    contact_option_default: "Téma",
+    contact_option1: "Általános érdeklődés",
+    contact_option2: "Edzés lehetőségek",
+    contact_option3: "Termékek",
+    contact_option4: "Partnerségi lehetőségek",
+    footer_pages: "Oldalak",
+    footer_products: "Termékek",
+    footer_contact: "Kapcsolat",
+    footer_faq: "Gyakori kérdések",
+    footer_support: "Támogatás",
+    footer_copyright_text: "© 2025 GānCuju™️©️ - Minden jog fenntartva"
+  },
+  en: {
+    nav_home: "Home",
+    nav_about: "About",
+    nav_mission: "Mission",
+    nav_features: "Features",
+    nav_philosophy: "Philosophy",
+    nav_contact: "Contact",
+    title: "The Rebirth of an Ancient Sport",
+    subtitle: "Over 4,000 years of football knowledge and culture",
+    cta_button: "Join Now!",
+    about_title: "The GānCuju™️©️ Legend",
+    about_p1:
+      'According to the GānCuju™️©️ legend, before Cuju, a simpler tool was used to play "football" in ancient China. GānCuju™️©️ was the game of common people.',
+    about_p2:
+      "Ancient Chinese society was fundamentally rural. The vast majority of Chinese families lived in small farming villages.",
+    about_feature1: "takes up minimal space",
+    about_feature2: "easily portable",
+    about_feature3: "robust and durable",
+    mission_title: "Our Mission",
+    mission_p1:
+      "GānCuju™️©️ is a philosophy that spans time and cultures, connecting people through sport.",
+    mission_p2:
+      "Our goal is to promote Chinese culture and language through sports.",
+    counter_years: "Years of history",
+    counter_variations: "Sports equipment variations",
+    counter_levels: "Training levels",
+    features_title: "Why GānCuju™️©️?",
+    feature1_title: "Unbeatable in Play",
+    feature1_text:
+      "GānCuju™️© is a high-intensity skill development game played in small areas.",
+    feature2_title: "A Game for Everyone",
+    feature2_text:
+      "Due to its versatility, everyone can be successful in some version of GānCuju™️©.",
+    feature3_title: "Skin Perception Development",
+    feature3_text:
+      "Through skin perception development, we can build reflexes that are much faster and more reliable.",
+    feature4_title: "Daily Physical Activity",
+    feature4_text:
+      "The game serves to educate children, builds confidence, and encourages playfully.",
+    philosophy_title: "The GānCuju™️©️ Philosophy",
+    philosophy_subtitle:
+      "Etiquette rules and game regulations that help in other areas of life",
+    philosophy1_title: "Respect",
+    philosophy1_text:
+      "In Chinese culture, respect is very important. Handshakes, bowing, and eye contact are important when greeting.",
+    philosophy2_title: "Cooperation",
+    philosophy2_text:
+      "Cuju is a symbol of cooperation and solidarity in Chinese culture.",
+    contact_title: "Become Part of the GānCuju™️©️ Community!",
+    contact_subtitle: "Join us and discover this exciting sport!",
+    contact_info: "Contact",
+    contact_address: "1234 Example Street, Example City",
+    contact_name: "Name",
+    contact_email: "Email address",
+    contact_phone: "Phone number",
+    contact_subject: "Subject",
+    contact_message: "Message",
+    contact_send: "Send",
+    contact_thank:
+      "Thank you for your message, {name}! We will contact you soon.",
+    footer_copyright: "All rights reserved",
+    footer_privacy: "Privacy Policy",
+    footer_terms: "Terms of Use",
+    // New translations for additional content
+    about_full_p1: "According to the GānCuju™️©️ legend, before Cuju, a simpler tool was used to play \"football\" in ancient China. GānCuju™️©️ was the game of common people, while imperial palaces had Cuju courts and large spaces surrounded by huge walls for protection.",
+    about_full_p2: "Ancient Chinese society was fundamentally rural. The vast majority of Chinese families lived in small farming villages where children had to play within the village or at its boundaries due to wild animals. Therefore, when designing the sports equipment, the following guidelines were crucial:",
+    about_full_p3: "Chinese bamboo provided the best solution for this. The flexibility and strength of bamboo perfectly symbolized the spirit of GānCuju™️©️: flexible yet resilient, just as players learned to adapt to different situations while maintaining their own strengths.",
+    image_alt_about: "GānCuju historical image",
+    image_overlay_title: "Ancient Tradition",
+    image_overlay_text: "Over 4000 years of history",
+    mission_full_p1: "GānCuju™️©️ is a philosophy that spans time and cultures, connecting people through sport. Our goal is to promote Chinese culture and language through sports, and to make this traditional Chinese sport widely known.",
+    mission_full_p2: "We know that our concept will make Cuju known and attractive throughout the world through our various sporting events, training courses, and competitions. These games are not only entertaining but also help preserve and pass on ancient Chinese football traditions to future generations.",
+    video_alt: "GānCuju demonstration",
+    feature1_full_p1: "GānCuju™️© is a high-intensity skill development game played in small areas. Every step on the field must be deliberate, as a wrong move can easily be exploited by the opponent.",
+    feature1_full_p2: "Strategy and quick decision-making are most important during the game. Only those who can immediately recognize the opponent's weaknesses and exploit them can succeed. The sweet taste of victory can only be felt by those who are persistent and don't give up easily.",
+    feature2_full_p1: "Due to the versatility of GānCuju™️©, everyone can be successful in some version of the game. This gives incredible confidence in other areas of life as well, and helps resolve personal conflicts peacefully.",
+    feature2_full_p2: "People who experienced the value of their own abilities in the game were able to handle personal conflicts more confidently and constructively. During the game, they learned that success can only be achieved by coordinating different abilities and strategies.",
+    feature3_full_p1: "Through skin perception development, we can build reflexes that, unlike reactions based on vision, do not require the participation of the cerebral cortex in the stimulus process, thus becoming much faster and more reliable.",
+    feature3_full_p2: "Various receptors are involved in touch-based reflexes. The \"skin sense,\" or skin sensory cells, indicate which part of our body is hit by the ball and how hard, while with the help of muscle and tendon spindles, we can determine the direction and speed of the incoming ball.",
+    feature4_full_p1: "The game also served to educate children, as every parent is responsible for raising their own child, and neglecting this has a long-term detrimental effect on society. Families where GānCuju™️© was not a tradition were despised by their community.",
+    feature4_full_p2: "This ancient Chinese game developed hand and foot technique, strengthened self-confidence, playfully encouraged, and taught perseverance and self-control. With Gānball™️, players gain experiences, develop their technical skills, and improve the quality of their game.",
+    philosophy_card_click: "Click on the card",
+    philosophy_card3_title: "Strategy",
+    philosophy_card3_text: "Strategy and quick decision-making are most important during the game. Only those who can immediately recognize the opponent's weaknesses and exploit them can succeed.",
+    philosophy_card4_title: "Community Experience",
+    philosophy_card4_text: "GānCuju™️©️ is not just a great game, but a cultural experience and an opportunity to learn more about ancient China's football history.",
+    products_title: "GānCuju™️© Product Family",
+    product1_title: "GānCuju™️©️ Competitive Sport",
+    product1_text: "The modern adaptation of ancient Chinese football. Organization of own international competitions and championships.",
+    product2_title: "Gānball™️ Sports Equipment",
+    product2_text: "The modular sports equipment can be transformed into 34 different tools. Innovative technological solutions.",
+    product3_title: "Lion Football Academy",
+    product3_text: "Complete training system with 8-level license system. Education Center training center.",
+    product4_title: "Ganball Games™️",
+    product4_text: "Recreational services. Adaptations of various sports: Tennis, Volleyball, Golf, Badminton.",
+    product_details: "Details",
+    contact_full_subtitle: "Join us and discover this exciting sport that combines tradition and modern technology!",
+    contact_phone_number: "+36 12 345 6789",
+    contact_email_address: "info@gancuju.com",
+    contact_option_default: "Subject",
+    contact_option1: "General inquiry",
+    contact_option2: "Training opportunities",
+    contact_option3: "Products",
+    contact_option4: "Partnership opportunities",
+    footer_pages: "Pages",
+    footer_products: "Products",
+    footer_contact: "Contact",
+    footer_faq: "FAQ",
+    footer_support: "Support",
+    footer_copyright_text: "© 2025 GānCuju™️©️ - All rights reserved"
+  },
+  cn: {
+    nav_home: "首页",
+    nav_about: "关于我们",
+    nav_mission: "使命",
+    nav_features: "特点",
+    nav_philosophy: "哲学",
+    nav_contact: "联系",
+    title: "古老运动的重生",
+    subtitle: "超过4000年的足球知识和文化",
+    cta_button: "立即加入！",
+    about_title: "GānCuju™️©️ 传说",
+    about_p1:
+      '根据GānCuju™️©️传说，在蹴鞠之前，古代中国使用更简单的工具来踢"足球"。GānCuju™️©️是普通人的游戏。',
+    about_p2:
+      "古代中国社会基本上是农村社会。绝大多数中国家庭住在小型农业村庄。",
+    about_feature1: "占用最小空间",
+    about_feature2: "便于携带",
+    about_feature3: "坚固耐用",
+    mission_title: "我们的使命",
+    mission_p1: "GānCuju™️©️是一种跨越时间和文化的哲学，通过体育连接人们。",
+    mission_p2: "我们的目标是通过体育推广中国文化和语言。",
+    counter_years: "年历史",
+    counter_variations: "种体育器材变化",
+    counter_levels: "个培训级别",
+    features_title: "为什么选择GānCuju™️©️？",
+    feature1_title: "比赛中无与伦比",
+    feature1_text: "GānCuju™️©是在小区域进行的高强度技能发展游戏。",
+    feature2_title: "适合所有人的游戏",
+    feature2_text:
+      "由于其多功能性，每个人都可以在某种版本的GānCuju™️©中取得成功。",
+    feature3_title: "皮肤感知发展",
+    feature3_text: "通过皮肤感知发展，我们可以建立更快更可靠的反射。",
+    feature4_title: "日常体育活动",
+    feature4_text: "这个游戏旨在教育儿童，建立信心，并以趣味的方式鼓励他们。",
+    philosophy_title: "GānCuju™️©️ 哲学",
+    philosophy_subtitle: "有助于生活其他领域的礼仪规则和游戏规则",
+    philosophy1_title: "尊重",
+    philosophy1_text:
+      "在中国文化中，尊重非常重要。问候时，握手、鞠躬和眼神接触都很重要。",
+    philosophy2_title: "合作",
+    philosophy2_text: "蹴鞠是中国文化中合作和团结的象征。",
+    contact_title: "成为GānCuju™️©️社区的一部分！",
+    contact_subtitle: "加入我们，发现这项令人兴奋的运动！",
+    contact_info: "联系",
+    contact_address: "1234示例街道，示例城市",
+    contact_name: "姓名",
+    contact_email: "电子邮件",
+    contact_phone: "电话号码",
+    contact_subject: "主题",
+    contact_message: "留言",
+    contact_send: "发送",
+    contact_thank: "感谢您的留言，{name}！我们将很快与您联系。",
+    footer_copyright: "版权所有",
+    footer_privacy: "隐私政策",
+    footer_terms: "使用条款",
+    // 新增内容的翻译
+    about_full_p1: "根据GānCuju™️©️传说，在蹴鞠之前，古代中国使用更简单的工具来踢"足球"。GānCuju™️©️是普通人的游戏，而皇宫里有蹴鞠场地和被巨大围墙环绕的安全保护空间。",
+    about_full_p2: "古代中国社会基本上是农村社会。绝大多数中国家庭住在小型农业村庄，由于野生动物的存在，孩子们必须在村子内或边界处玩耍。因此，设计体育器材时，以下指导原则至关重要：",
+    about_full_p3: "中国竹子为此提供了最佳解决方案。竹子的灵活性和强度完美地象征了GānCuju™️©️的精神：柔韧但有弹性，就像玩家学会适应不同情况的同时保持自己的优势一样。",
+    image_alt_about: "GānCuju历史图像",
+    image_overlay_title: "古老传统",
+    image_overlay_text: "超过4000年的历史",
+    mission_full_p1: "GānCuju™️©️是一种跨越时间和文化的哲学，通过体育连接人们。我们的目标是通过体育推广中国文化和语言，并使这种传统中国运动广为人知。",
+    mission_full_p2: "我们知道，通过我们的各种体育赛事、培训课程和比赛，我们的理念将使蹴鞠在全世界范围内变得知名和有吸引力。这些游戏不仅有趣，还有助于保护和传承古代中国足球传统给后代。",
+    video_alt: "GānCuju示范",
+    feature1_full_p1: "GānCuju™️©是在小区域进行的高强度技能发展游戏。场上的每一步都必须深思熟虑，因为错误的动作很容易被对手利用。",
+    feature1_full_p2: "在比赛中，策略和快速决策是最重要的。只有那些能够立即识别对手弱点并加以利用的人才能取得成功。只有那些坚持不懈、不轻易放弃的人才能体会到胜利的甜蜜滋味。",
+    feature2_full_p1: "由于GānCuju™️©的多功能性，每个人都可以在某种版本的游戏中获得成功。这也为生活的其他领域提供了令人难以置信的信心，并有助于和平解决个人冲突。",
+    feature2_full_p2: "在游戏中体验到自己能力价值的人能够更自信、更有建设性地处理个人冲突。在游戏过程中，他们学会了只有通过协调不同的能力和策略才能取得成功。",
+    feature3_full_p1: "通过皮肤感知发展，我们可以建立反射，这种反射与基于视觉的反应不同，不需要大脑皮层参与刺激过程，因此变得更快更可靠。",
+    feature3_full_p2: "触觉反射中涉及各种感受器。"皮肤感觉"，即皮肤感觉细胞，指示我们身体的哪个部位被球击中以及力度有多大，而通过肌肉和肌腱纺锤体的帮助，我们可以确定来球的方向和速度。",
+    feature4_full_p1: "这个游戏也用于教育孩子，因为每个父母都有责任抚养自己的孩子，忽视这一点会对社会产生长期不利影响。GānCuju™️©不是传统的家庭会被社区鄙视。",
+    feature4_full_p2: "这个古老的中国游戏发展了手脚技巧，增强了自信心，以趣味的方式鼓励，教导毅力和自我控制。通过Gānball™️，玩家获得经验，发展他们的技术技能，提高他们的游戏质量。
+
+    philosophy_card_click: "点击卡片",
+    philosophy_card3_title: "策略",
+    philosophy_card3_text: "在游戏过程中，策略和快速决策是最重要的。只有那些能够立即识别对手弱点并加以利用的人才能取得成功。",
+    philosophy_card4_title: "社区体验",
+    philosophy_card4_text: "GānCuju™️©️不仅仅是一个伟大的游戏，而且是一种文化体验，是了解更多关于古代中国足球历史的机会。",
+    products_title: "GānCuju™️©产品系列",
+    product1_title: "GānCuju™️©️竞技运动",
+    product1_text: "古代中国足球的现代改编。组织自己的国际比赛和锦标赛。",
+    product2_title: "Gānball™️体育器材",
+    product2_text: "模块化体育器材可以转变为34种不同的工具。创新的技术解决方案。",
+    product3_title: "狮子足球学院",
+    product3_text: "具有8级许可证系统的完整培训系统。教育中心培训中心。",
+    product4_title: "Ganball Games™️",
+    product4_text: "休闲服务。各种运动的改编：网球、排球、高尔夫、羽毛球。",
+    product_details: "详情",
+    contact_full_subtitle: "加入我们，发现这项结合传统和现代技术的令人兴奋的运动！",
+    contact_phone_number: "+36 12 345 6789",
+    contact_email_address: "info@gancuju.cn",
+    contact_option_default: "主题",
+    contact_option1: "一般咨询",
+    contact_option2: "培训机会",
+    contact_option3: "产品",
+    contact_option4: "合作机会",
+    footer_pages: "页面",
+    footer_products: "产品",
+    footer_contact: "联系",
+    footer_faq: "常见问题",
+    footer_support: "支持",
+    footer_copyright_text: "© 2025 GānCuju™️©️ - 版权所有"
+  },
+  de: {
+    nav_home: "Startseite",
+    nav_about: "Über uns",
+    nav_mission: "Mission",
+    nav_features: "Eigenschaften",
+    nav_philosophy: "Philosophie",
+    nav_contact: "Kontakt",
+    title: "Die Wiedergeburt eines alten Sports",
+    subtitle: "Über 4.000 Jahre Fußballwissen und -kultur",
+    cta_button: "Jetzt beitreten!",
+    about_title: "Die GānCuju™️©️ Legende",
+    about_p1:
+      'Laut der GānCuju™️©️-Legende wurde vor Cuju ein einfacheres Werkzeug verwendet, um im alten China "Fußball" zu spielen. GānCuju™️©️ war das Spiel des einfachen Volkes.',
+    about_p2:
+      "Die Gesellschaft des alten China war grundsätzlich ländlich. Die überwiegende Mehrheit der chinesischen Familien lebte in kleinen Bauerndörfern.",
+    about_feature1: "nimmt minimalen Platz ein",
+    about_feature2: "leicht zu transportieren",
+    about_feature3: "robust und langlebig",
+    mission_title: "Unsere Mission",
+    mission_p1:
+      "GānCuju™️©️ ist eine Philosophie, die Zeit und Kulturen überspannt und Menschen durch Sport verbindet.",
+    mission_p2:
+      "Unser Ziel ist es, die chinesische Kultur und Sprache durch Sport zu fördern.",
+    counter_years: "Jahre Geschichte",
+    counter_variations: "Sportgeräte-Variationen",
+    counter_levels: "Trainingsstufen",
+    features_title: "Warum GānCuju™️©️?",
+    feature1_title: "Unschlagbar im Spiel",
+    feature1_text:
+      "GānCuju™️© ist ein hochintensives Spiel zur Entwicklung von Fähigkeiten, das auf kleinen Flächen gespielt wird.",
+    feature2_title: "Ein Spiel für jeden",
+    feature2_text:
+      "Aufgrund seiner Vielseitigkeit kann jeder in einer Version von GānCuju™️© erfolgreich sein.",
+    feature3_title: "Entwicklung der Hautwahrnehmung",
+    feature3_text:
+      "Durch die Entwicklung der Hautwahrnehmung können wir Reflexe aufbauen, die viel schneller und zuverlässiger sind.",
+    feature4_title: "Tägliche körperliche Aktivität",
+    feature4_text:
+      "Das Spiel dient der Erziehung von Kindern, stärkt das Selbstvertrauen und fördert spielerisch.",
+    philosophy_title: "Die GānCuju™️©️ Philosophie",
+    philosophy_subtitle:
+      "Etikette-Regeln und Spielregeln, die in anderen Lebensbereichen helfen",
+    philosophy1_title: "Respekt",
+    philosophy1_text:
+      "In der chinesischen Kultur ist Respekt sehr wichtig. Handschlag, Verbeugung und Augenkontakt sind beim Grüßen wichtig.",
+    philosophy2_title: "Zusammenarbeit",
+    philosophy2_text:
+      "Cuju ist ein Symbol für Zusammenarbeit und Solidarität in der chinesischen Kultur.",
+    contact_title: "Werde Teil der GānCuju™️©️-Gemeinschaft!",
+    contact_subtitle:
+      "Schließe dich uns an und entdecke diesen aufregenden Sport!",
+    contact_info: "Kontakt",
+    contact_address: "1234 Beispielstraße, Beispielstadt",
+    contact_name: "Name",
+    contact_email: "E-Mail-Adresse",
+    contact_phone: "Telefonnummer",
+    contact_subject: "Betreff",
+    contact_message: "Nachricht",
+    contact_send: "Senden",
+    contact_thank:
+      "Vielen Dank für Ihre Nachricht, {name}! Wir werden uns bald bei Ihnen melden.",
+    footer_copyright: "Alle Rechte vorbehalten",
+    footer_privacy: "Datenschutzrichtlinie",
+    footer_terms: "Nutzungsbedingungen",
+    // Neue Übersetzungen für zusätzliche Inhalte
+    about_full_p1: "Laut der GānCuju™️©️-Legende wurde vor Cuju ein einfacheres Werkzeug verwendet, um im alten China \"Fußball\" zu spielen. GānCuju™️©️ war das Spiel des einfachen Volkes, während kaiserliche Paläste über Cuju-Plätze und große, von riesigen Mauern umgebene Schutzräume verfügten.",
+    about_full_p2: "Die Gesellschaft des alten China war grundsätzlich ländlich. Die überwiegende Mehrheit der chinesischen Familien lebte in kleinen Bauerndörfern, wo Kinder aufgrund von Wildtieren innerhalb des Dorfes oder an dessen Grenzen spielen mussten. Daher waren bei der Gestaltung der Sportgeräte folgende Richtlinien entscheidend:",
+    about_full_p3: "Chinesischer Bambus bot dafür die beste Lösung. Die Flexibilität und Stärke des Bambus symbolisierte perfekt den Geist des GānCuju™️©️: flexibel, aber widerstandsfähig, genauso wie die Spieler lernten, sich an verschiedene Situationen anzupassen, während sie ihre eigenen Stärken bewahrten.",
+    image_alt_about: "GānCuju historisches Bild",
+    image_overlay_title: "Alte Tradition",
+    image_overlay_text: "Über 4000 Jahre Geschichte",
+    mission_full_p1: "GānCuju™️©️ ist eine Philosophie, die Zeit und Kulturen überspannt und Menschen durch Sport verbindet. Unser Ziel ist es, die chinesische Kultur und Sprache durch Sport zu fördern und diesen traditionellen chinesischen Sport weithin bekannt zu machen.",
+    mission_full_p2: "Wir wissen, dass unser Konzept Cuju durch unsere verschiedenen Sportveranstaltungen, Schulungen und Wettbewerbe weltweit bekannt und attraktiv machen wird. Diese Spiele sind nicht nur unterhaltsam, sondern helfen auch, die alten chinesischen Fußballtraditionen zu bewahren und an zukünftige Generationen weiterzugeben.",
+    video_alt: "GānCuju Demonstration",
+    feature1_full_p1: "GānCuju™️© ist ein hochintensives Spiel zur Entwicklung von Fähigkeiten, das auf kleinen Flächen gespielt wird. Jeder Schritt auf dem Feld muss wohlüberlegt sein, da ein falscher Zug leicht vom Gegner ausgenutzt werden kann.",
+    feature1_full_p2: "Strategie und schnelle Entscheidungsfindung sind während des Spiels am wichtigsten. Nur diejenigen, die die Schwächen des Gegners sofort erkennen und ausnutzen können, können erfolgreich sein. Den süßen Geschmack des Sieges können nur diejenigen spüren, die beharrlich sind und nicht leicht aufgeben.",
+    feature2_full_p1: "Aufgrund der Vielseitigkeit von GānCuju™️© kann jeder in irgendeiner Version des Spiels erfolgreich sein. Dies gibt auch in anderen Lebensbereichen unglaubliches Selbstvertrauen und hilft, persönliche Konflikte friedlich zu lösen.",
+    feature2_full_p2: "Menschen, die den Wert ihrer eigenen Fähigkeiten im Spiel erfahren haben, konnten mit persönlichen Konflikten selbstbewusster und konstruktiver umgehen. Während des Spiels lernten sie, dass Erfolg nur durch die Koordination verschiedener Fähigkeiten und Strategien erreicht werden kann.",
+    feature3_full_p1: "Durch die Entwicklung der Hautwahrnehmung können wir Reflexe aufbauen, die im Gegensatz zu Reaktionen auf Sichtbasis keine Beteiligung der Großhirnrinde am Reizprozess erfordern, wodurch sie viel schneller und zuverlässiger werden.",
+    feature3_full_p2: "Bei berührungsbasierten Reflexen sind verschiedene Rezeptoren beteiligt. Der \"Hautsinn\" oder die Sinneszellen der Haut zeigen an, welcher Teil unseres Körpers vom Ball getroffen wird und wie hart, während wir mit Hilfe von Muskel- und Sehnenspindeln die Richtung und Geschwindigkeit des ankommenden Balls bestimmen können.",
+    feature4_full_p1: "Das Spiel diente auch der Erziehung von Kindern, da jeder Elternteil für die Erziehung des eigenen Kindes verantwortlich ist, und eine Vernachlässigung langfristig negative Auswirkungen auf die Gesellschaft hat. Familien, in denen GānCuju™️© keine Tradition war, wurden von ihrer Gemeinschaft verachtet.",
+    feature4_full_p2: "Dieses alte chinesische Spiel entwickelte Hand- und Fußtechnik, stärkte das Selbstvertrauen, ermutigte spielerisch und lehrte Ausdauer und Selbstbeherrschung. Mit Gānball™️ sammeln Spieler Erfahrungen, entwickeln ihre technischen Fähigkeiten und verbessern die Qualität ihres Spiels.",
+    philosophy_card_click: "Klicken Sie auf die Karte",
+    philosophy_card3_title: "Strategie",
+    philosophy_card3_text: "Strategie und schnelle Entscheidungsfindung sind während des Spiels am wichtigsten. Nur diejenigen, die die Schwächen des Gegners sofort erkennen und ausnutzen können, können erfolgreich sein.",
+    philosophy_card4_title: "Gemeinschaftserlebnis",
+    philosophy_card4_text: "GānCuju™️©️ ist nicht nur ein großartiges Spiel, sondern auch ein kulturelles Erlebnis und eine Gelegenheit, mehr über die Fußballgeschichte des alten China zu erfahren.",
+    products_title: "GānCuju™️© Produktfamilie",
+    product1_title: "GānCuju™️©️ Wettkampfsport",
+    product1_text: "Die moderne Adaptation des altchinesischen Fußballs. Organisation eigener internationaler Wettbewerbe und Meisterschaften.",
+    product2_title: "Gānball™️ Sportgerät",
+    product2_text: "Das modulare Sportgerät kann in 34 verschiedene Werkzeuge umgewandelt werden. Innovative technologische Lösungen.",
+    product3_title: "Lion Football Academy",
+    product3_text: "Komplettes Trainingssystem mit 8-stufigem Lizenzsystem. Education Center Trainingszentrum.",
+    product4_title: "Ganball Games™️",
+    product4_text: "Erholungsdienstleistungen. Adaptionen verschiedener Sportarten: Tennis, Volleyball, Golf, Badminton.",
+    product_details: "Details",
+    contact_full_subtitle: "Schließe dich uns an und entdecke diesen aufregenden Sport, der Tradition und moderne Technologie verbindet!",
+    contact_phone_number: "+36 12 345 6789",
+    contact_email_address: "info@gancuju.de",
+    contact_option_default: "Betreff",
+    contact_option1: "Allgemeine Anfrage",
+    contact_option2: "Trainingsmöglichkeiten",
+    contact_option3: "Produkte",
+    contact_option4: "Partnerschaftsmöglichkeiten",
+    footer_pages: "Seiten",
+    footer_products: "Produkte",
+    footer_contact: "Kontakt",
+    footer_faq: "Häufig gestellte Fragen",
+    footer_support: "Unterstützung",
+    footer_copyright_text: "© 2025 GānCuju™️©️ - Alle Rechte vorbehalten"
+  },
+};
+
+// Aktuális nyelv kiolvasása a URL-ből vagy localStorage-ból
+function getCurrentLanguage() {
+  // URL paraméterből
+  const urlParams = new URLSearchParams(window.location.search);
+  let lang = urlParams.get("lang");
+
+  // Ha nincs URL paraméter, ellenőrizzük a localStorage-t
+  if (!lang) {
+    lang = localStorage.getItem("selectedLanguage");
+  }
+
+  // Ha nincs se URL paraméter, se localStorage, alapértelmezett nyelv
+  if (!lang || !translations[lang]) {
+    lang = "hu"; // Alapértelmezett nyelv
+  }
+
+  // Mentés localStorage-ba
+  localStorage.setItem("selectedLanguage", lang);
+
+  return lang;
+}
+
+// Aktuális nyelv
+let currentLanguage = getCurrentLanguage();
+
+// Nyelv beállítása
+function setLanguage(lang) {
+  if (translations[lang]) {
+    currentLanguage = lang;
+    localStorage.setItem("selectedLanguage", lang);
+
+    // URL frissítése
+    const url = new URL(window.location);
+    url.searchParams.set("lang", lang);
+    window.history.pushState({}, "", url);
+
+    // Oldal szövegeinek frissítése
+    updatePageTexts();
+
+    // Nyelvválasztó frissítése
+    updateLanguageSelector();
+  }
+}
+
+// Oldal szövegeinek frissítése
+function updatePageTexts() {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (translations[currentLanguage][key]) {
+      element.innerHTML = translations[currentLanguage][key];
+    }
+  });
+
+  // Címkék frissítése
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    if (translations[currentLanguage][key]) {
+      element.placeholder = translations[currentLanguage][key];
+    }
+  });
+
+  // HTML title frissítése
+  document.title = "GānCuju™️©️ - " + translations[currentLanguage]["title"];
+}
+
+// Nyelvválasztó frissítése
+function updateLanguageSelector() {
+  const selector = document.getElementById("languageSelector");
+  if (selector) {
+    selector.value = currentLanguage;
+  }
+}
+
+// Nyelvválasztó létrehozása valódi zászlókkal
+function createLanguageSelector() {
+  const selector = document.createElement("div");
+  selector.className = "language-selector";
+
+  // Zászlók URL-jei és nyelvkódok
+  const flags = {
+    hu: "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/flags/4x3/hu.svg",
+    en: "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/flags/4x3/gb.svg",
+    cn: "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/flags/4x3/cn.svg",
+    de: "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/flags/4x3/de.svg",
+  };
+
+  let html = '<div class="flag-container">';
+
+  for (const [code, flagUrl] of Object.entries(flags)) {
+    const activeClass = code === currentLanguage ? "active" : "";
+    html += `<div class="flag ${activeClass}" onclick="setLanguage('${code}')" title="${languages[code]}">
+                 <img src="${flagUrl}" alt="${languages[code]}">
+               </div>`;
+  }
+
+  html += "</div>";
+  selector.innerHTML = html;
+
+  // Hozzáadás a dokumentumhoz
+  document.body.appendChild(selector);
+
+  // CSS hozzáadása
+  const style = document.createElement("style");
+  style.textContent = `
+      .language-selector {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1001;
+      }
+      
+      .flag-container {
+          display: flex;
+          gap: 10px;
+      }
+      
+      .flag {
+          width: 30px;
+          height: 20px;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+          border-radius: 4px;
+          overflow: hidden;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      .flag img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .flag:hover {
+          opacity: 1;
+          transform: scale(1.2);
+      }
+      
+      .flag.active {
+          opacity: 1;
+          transform: scale(1.1);
+          box-shadow: 0 0 10px rgba(255,255,255,0.5);
+      }
+  `;
+  document.head.appendChild(style);
+}
+
+// Nyelvválasztó frissítése
+function updateLanguageSelector() {
+  document.querySelectorAll(".flag").forEach((flag) => {
+    flag.classList.remove("active");
+  });
+
+  const activeFlag = document.querySelector(
+    `.flag[onclick="setLanguage('${currentLanguage}')"]`
+  );
+  if (activeFlag) {
+    activeFlag.classList.add("active");
+  }
+}
+
+// Előkészítés az oldal betöltésekor - a tartalom elemekhez data-i18n attribútumok hozzáadása
+function prepareContentForTranslation() {
+  // Ez a függvény hozzáadja a data-i18n attribútumokat a tartalom elemekhez
+  // About section
+  const aboutSection = document.querySelector('.about-content');
+  if (aboutSection) {
+    const paragraphs = aboutSection.querySelectorAll('.about-text p');
+    if (paragraphs.length >= 1) paragraphs[0].setAttribute('data-i18n', 'about_full_p1');
+    if (paragraphs.length >= 2) paragraphs[1].setAttribute('data-i18n', 'about_full_p2');
+    if (paragraphs.length >= 3) paragraphs[2].setAttribute('data-i18n', 'about_full_p3');
+    
+    // Features
+    const aboutImg = aboutSection.querySelector('.about-image img');
+    if (aboutImg) aboutImg.setAttribute('data-i18n-alt', 'image_alt_about');
+    
+    const overlayTitle = aboutSection.querySelector('.overlay-content h3');
+    if (overlayTitle) overlayTitle.setAttribute('data-i18n', 'image_overlay_title');
+    
+    const overlayText = aboutSection.querySelector('.overlay-content p');
+    if (overlayText) overlayText.setAttribute('data-i18n', 'image_overlay_text');
+  }
+  
+  // Mission section
+  const missionSection = document.querySelector('.mission-content');
+  if (missionSection) {
+    const paragraphs = missionSection.querySelectorAll('.mission-text p');
+    if (paragraphs.length >= 1) paragraphs[0].setAttribute('data-i18n', 'mission_full_p1');
+    if (paragraphs.length >= 2) paragraphs[1].setAttribute('data-i18n', 'mission_full_p2');
+    
+    const videoImg = missionSection.querySelector('.video-placeholder img');
+    if (videoImg) videoImg.setAttribute('data-i18n-alt', 'video_alt');
+    
+    // Counter items
+    const counterItems = missionSection.querySelectorAll('.counter-item p');
+    if (counterItems.length >= 1) counterItems[0].setAttribute('data-i18n', 'counter_years');
+    if (counterItems.length >= 2) counterItems[1].setAttribute('data-i18n', 'counter_variations');
+    if (counterItems.length >= 3) counterItems[2].setAttribute('data-i18n', 'counter_levels');
+  }
+  
+  // Features section
+  const tabPanes = document.querySelectorAll('.tab-pane');
+  if (tabPanes.length >= 1) {
+    const pane1 = tabPanes[0];
+    const pane1Title = pane1.querySelector('h3');
+    if (pane1Title) pane1Title.setAttribute('data-i18n', 'feature1_title');
+    const pane1Paragraphs = pane1.querySelectorAll('p');
+    if (pane1Paragraphs.length >= 1) pane1Paragraphs[0].setAttribute('data-i18n', 'feature1_full_p1');
+    if (pane1Paragraphs.length >= 2) pane1Paragraphs[1].setAttribute('data-i18n', 'feature1_full_p2');
+    const pane1Img = pane1.querySelector('img');
+    if (pane1Img) pane1Img.setAttribute('data-i18n-alt', 'feature1_title');
+  }
+  
+  if (tabPanes.length >= 2) {
+    const pane2 = tabPanes[1];
+    const pane2Title = pane2.querySelector('h3');
+    if (pane2Title) pane2Title.setAttribute('data-i18n', 'feature2_title');
+    const pane2Paragraphs = pane2.querySelectorAll('p');
+    if (pane2Paragraphs.length >= 1) pane2Paragraphs[0].setAttribute('data-i18n', 'feature2_full_p1');
+    if (pane2Paragraphs.length >= 2) pane2Paragraphs[1].setAttribute('data-i18n', 'feature2_full_p2');
+    const pane2Img = pane2.querySelector('img');
+    if (pane2Img) pane2Img.setAttribute('data-i18n-alt', 'feature2_title');
+  }
+  
+  if (tabPanes.length >= 3) {
+    const pane3 = tabPanes[2];
+    const pane3Title = pane3.querySelector('h3');
+    if (pane3Title) pane3Title.setAttribute('data-i18n', 'feature3_title');
+    const pane3Paragraphs = pane3.querySelectorAll('p');
+    if (pane3Paragraphs.length >= 1) pane3Paragraphs[0].setAttribute('data-i18n', 'feature3_full_p1');
+    if (pane3Paragraphs.length >= 2) pane3Paragraphs[1].setAttribute('data-i18n', 'feature3_full_p2');
+    const pane3Img = pane3.querySelector('img');
+    if (pane3Img) pane3Img.setAttribute('data-i18n-alt', 'feature3_title');
+  }
+  
+  if (tabPanes.length >= 4) {
+    const pane4 = tabPanes[3];
+    const pane4Title = pane4.querySelector('h3');
+    if (pane4Title) pane4Title.setAttribute('data-i18n', 'feature4_title');
+    const pane4Paragraphs = pane4.querySelectorAll('p');
+    if (pane4Paragraphs.length >= 1) pane4Paragraphs[0].setAttribute('data-i18n', 'feature4_full_p1');
+    if (pane4Paragraphs.length >= 2) pane4Paragraphs[1].setAttribute('data-i18n', 'feature4_full_p2');
+    const pane4Img = pane4.querySelector('img');
+    if (pane4Img) pane4Img.setAttribute('data-i18n-alt', 'feature4_title');
+  }
+  
+  // Philosophy cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    const frontTitle = card.querySelector('.card-front h3');
+    const frontText = card.querySelector('.card-front p');
+    const backTitle = card.querySelector('.card-back h3');
+    const backText = card.querySelector('.card-back p');
+    
+    if (index === 0) {
+      if (frontTitle) frontTitle.setAttribute('data-i18n', 'philosophy1_title');
+      if (frontText) frontText.setAttribute('data-i18n', 'philosophy_card_click');
+      if (backTitle) backTitle.setAttribute('data-i18n', 'philosophy1_title');
+      if (backText) backText.setAttribute('data-i18n', 'philosophy1_text');
+    } else if (index === 1) {
+      if (frontTitle) frontTitle.setAttribute('data-i18n', 'philosophy2_title');
+      if (frontText) frontText.setAttribute('data-i18n', 'philosophy_card_click');
+      if (backTitle) backTitle.setAttribute('data-i18n', 'philosophy2_title');
+      if (backText) backText.setAttribute('data-i18n', 'philosophy2_text');
+    } else if (index === 2) {
+      if (frontTitle) frontTitle.setAttribute('data-i18n', 'philosophy_card3_title');
+      if (frontText) frontText.setAttribute('data-i18n', 'philosophy_card_click');
+      if (backTitle) backTitle.setAttribute('data-i18n', 'philosophy_card3_title');
+      if (backText) backText.setAttribute('data-i18n', 'philosophy_card3_text');
+    } else if (index === 3) {
+      if (frontTitle) frontTitle.setAttribute('data-i18n', 'philosophy_card4_title');
+      if (frontText) frontText.setAttribute('data-i18n', 'philosophy_card_click');
+      if (backTitle) backTitle.setAttribute('data-i18n', 'philosophy_card4_title');
+      if (backText) backText.setAttribute('data-i18n', 'philosophy_card4_text');
+    }
+  });
+  
+  // Products section
+  const productsTitle = document.querySelector('#products .section-title');
+  if (productsTitle) productsTitle.setAttribute('data-i18n', 'products_title');
+  
+  const productSlides = document.querySelectorAll('.product-slide');
+  if (productSlides.length >= 1) {
+    const slide1Title = productSlides[0].querySelector('h3');
+    if (slide1Title) slide1Title.setAttribute('data-i18n', 'product1_title');
+    const slide1Text = productSlides[0].querySelector('p');
+    if (slide1Text) slide1Text.setAttribute('data-i18n', 'product1_text');
+    const slide1Link = productSlides[0].querySelector('.product-link');
+    if (slide1Link) slide1Link.setAttribute('data-i18n', 'product_details');
+  }
+  
+  if (productSlides.length >= 2) {
+    const slide2Title = productSlides[1].querySelector('h3');
+    if (slide2Title) slide2Title.setAttribute('data-i18n', 'product2_title');
+    const slide2Text = productSlides[1].querySelector('p');
+    if (slide2Text) slide2Text.setAttribute('data-i18n', 'product2_text');
+    const slide2Link = productSlides[1].querySelector('.product-link');
+    if (slide2Link) slide2Link.setAttribute('data-i18n', 'product_details');
+  }
+  
+  if (productSlides.length >= 3) {
+    const slide3Title = productSlides[2].querySelector('h3');
+    if (slide3Title) slide3Title.setAttribute('data-i18n', 'product3_title');
+    const slide3Text = productSlides[2].querySelector('p');
+    if (slide3Text) slide
