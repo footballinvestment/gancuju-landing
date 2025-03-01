@@ -159,7 +159,7 @@
   "footer_support": "Támogatás",
   "footer_copyright": "Minden jog fenntartva",
   "footer_privacy": "Adatvédelmi irányelvek",
-  "footer_terms": "Felhasználási feltételek"
+  "footer_terms": "Felhasználási feltételek",
   "science_visual_path_1": "Retina",
   "science_visual_path_2": "Látóideg",
   "science_visual_path_3": "Agyi feldolgozás",
@@ -167,11 +167,8 @@
   "science_visual_path_5": "Gerincvelő",
   "science_visual_path_6": "Perifériás ideg",
   "science_visual_path_7": "Izom válasz",
-  
   "science_tactile_path_1": "Bőr receptorok",
   "science_tactile_path_2": "Gerincvelő",
   "science_tactile_path_3": "Izom válasz",
-  
   "science_time_unit": "ezredmásodperc"
-}
 }
