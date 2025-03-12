@@ -103,19 +103,34 @@ levels.forEach((level) => {
   });
 });
 
-// Számláló animáció
+// Javított számláló animáció függvény
 function startCounters() {
+  const counters = document.querySelectorAll(".counter");
+
+  // Külön animáció létrehozása minden számlálóhoz
   counters.forEach((counter) => {
     const target = +counter.getAttribute("data-count");
-    const count = +counter.innerText;
+    let count = 0;
     const increment = target / 100;
+    const duration = 2000; // Animáció időtartama ms-ben
+    const steps = 100; // Az animáció lépéseinek száma
+    const stepTime = duration / steps;
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(() => startCounters(), 10);
-    } else {
-      counter.innerText = target;
-    }
+    // Kezdeti érték beállítása
+    counter.innerText = "0";
+
+    // Intervallum létrehozása ehhez a számlálóhoz
+    const interval = setInterval(() => {
+      count += increment;
+
+      if (count >= target) {
+        // A végső érték pontosan a cél legyen
+        counter.innerText = target;
+        clearInterval(interval);
+      } else {
+        counter.innerText = Math.ceil(count);
+      }
+    }, stepTime);
   });
 }
 
@@ -133,7 +148,6 @@ if (missionSection) {
     },
     { threshold: 0.5 }
   );
-
   observer.observe(missionSection);
 }
 
@@ -257,41 +271,64 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Nyelvváltás után a UI elemek frissítése
-document.addEventListener("languageChanged", (event) => {
-  // Dropdown mezők frissítése
-  const subjectSelect = document.getElementById("subject");
-  if (subjectSelect) {
-    const selectedValue = subjectSelect.value;
-    const options = subjectSelect.querySelectorAll("option");
+// Level timeline animáció inicializálása
+document.addEventListener("DOMContentLoaded", function () {
+  const levelContainers = document.querySelectorAll(".level-container");
 
-    options.forEach((option) => {
-      const key = option.getAttribute("data-i18n");
-      if (key && LanguageManager.translations[key]) {
-        option.textContent = LanguageManager.translations[key];
-      }
+  // Intersection observer létrehozása, hogy animáljuk a szinteket, amikor láthatóvá válnak
+  const levelObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Animáció indítása késleltetéssel a szint indexe alapján
+          const level = entry.target;
+          const index = Array.from(levelContainers).indexOf(level);
+          setTimeout(() => {
+            level.style.animationPlayState = "running";
+          }, index * 200);
+
+          // Megfigyelés leállítása az animáció elindítása után
+          levelObserver.unobserve(level);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // Minden szint konténer megfigyelése
+  levelContainers.forEach((container) => {
+    levelObserver.observe(container);
+  });
+
+  // Hover/klikk interakció hozzáadása a szint leírásokhoz mobilon
+  if (window.innerWidth <= 768) {
+    levelContainers.forEach((container) => {
+      container.addEventListener("click", function () {
+        const content = this.querySelector(".level-content");
+        const desc = this.querySelector(".level-desc");
+
+        // Aktív osztály váltása
+        if (content.classList.contains("active")) {
+          content.classList.remove("active");
+          desc.style.maxHeight = "0";
+          desc.style.opacity = "0";
+          desc.style.marginTop = "0";
+        } else {
+          // Aktív osztály eltávolítása minden más szintről
+          document.querySelectorAll(".level-content.active").forEach((el) => {
+            el.classList.remove("active");
+            const otherDesc = el.querySelector(".level-desc");
+            otherDesc.style.maxHeight = "0";
+            otherDesc.style.opacity = "0";
+            otherDesc.style.marginTop = "0";
+          });
+
+          content.classList.add("active");
+          desc.style.maxHeight = desc.scrollHeight + "px";
+          desc.style.opacity = "1";
+          desc.style.marginTop = "15px";
+        }
+      });
     });
-
-    subjectSelect.value = selectedValue;
-  }
-
-  // Bármilyen egyéb dinamikus UI elem frissítése itt
-});
-
-// Oldal betöltésekor
-document.addEventListener("DOMContentLoaded", () => {
-  // Termék slider inicializálása
-  showSlide(0);
-
-  // Aktív menüpont beállítása
-  const hash = window.location.hash;
-  if (hash) {
-    const activeNavItem = document.querySelector(
-      `.navbar-nav a[href="${hash}"]`
-    );
-    if (activeNavItem) {
-      navItems.forEach((item) => item.classList.remove("active"));
-      activeNavItem.classList.add("active");
-    }
   }
 });

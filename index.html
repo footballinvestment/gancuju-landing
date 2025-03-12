@@ -48,12 +48,9 @@
             <li>
               <a href="#competition" data-i18n="nav_competition">Competition</a>
             </li>
-            <li><a href="#mission" data-i18n="nav_mission">Mission</a></li>
-            <li><a href="#features" data-i18n="nav_features">Features</a></li>
             <li>
               <a href="#training" data-i18n="nav_training">Training System</a>
             </li>
-            <li><a href="#science" data-i18n="nav_science">Science</a></li>
             <li>
               <a href="#philosophy" data-i18n="nav_philosophy">Philosophy</a>
             </li>
@@ -99,7 +96,7 @@
       </div>
     </header>
 
-    <!-- About Section -->
+    <!-- About Section (includes Mission) -->
     <section id="about" class="about section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up" data-i18n="about_title">
@@ -141,6 +138,12 @@
               adapt to different situations while maintaining their own
               strengths.
             </p>
+            <p data-i18n="about_global_reach">
+              GānCuju™️©️ is now accessible in 16+ languages, making it truly
+              global across all continents. Our mission is to share this ancient
+              sport with the entire world, breaking down language barriers and
+              uniting people through the universal language of sport.
+            </p>
           </div>
           <div class="about-image" data-aos="fade-left">
             <img
@@ -152,6 +155,63 @@
               <div class="overlay-content">
                 <h3>Ancient Tradition</h3>
                 <p>Over 4000 years of history</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission section content added here -->
+        <div class="mission-section" id="mission" style="margin-top: 60px">
+          <h2
+            class="section-title"
+            data-aos="fade-up"
+            data-i18n="mission_title"
+          >
+            Our Mission
+          </h2>
+          <div class="mission-content">
+            <div class="mission-video" data-aos="zoom-in">
+              <div class="video-placeholder">
+                <img
+                  src="assets/images/about/video-thumbnail.jpg"
+                  alt="GānCuju demonstration"
+                  data-i18n-alt="mission_video_alt"
+                />
+                <div class="play-button" id="playVideoBtn">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mission-text" data-aos="fade-up">
+              <p data-i18n="mission_p1">
+                GānCuju™️©️ is a philosophy that spans time and cultures,
+                connecting people through sport. Our goal is to promote Chinese
+                culture and language through sports, and to make the traditional
+                Chinese sports game widely known.
+              </p>
+              <p data-i18n="mission_p2">
+                We know that the concept we have created will make Cuju known
+                and attractive throughout the world through our various sporting
+                events, trainings, and competitions. These games are not only
+                entertaining but help preserve and pass on ancient Chinese
+                football traditions to future generations.
+              </p>
+            </div>
+            <div class="mission-counter" data-aos="fade-up">
+              <div class="counter-item">
+                <span class="counter" data-count="4000">0</span>
+                <span>+</span>
+                <p data-i18n="counter_years">Years of history</p>
+              </div>
+              <div class="counter-item">
+                <span class="counter" data-count="34">0</span>
+                <p data-i18n="counter_variations">
+                  Sports equipment variations
+                </p>
+              </div>
+              <div class="counter-item">
+                <span class="counter" data-count="8">0</span>
+                <p data-i18n="counter_levels">Training levels</p>
               </div>
             </div>
           </div>
@@ -254,59 +314,6 @@
             <p data-i18n="competition_global_desc">
               International tournament circuit across five continents
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission" class="mission section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up" data-i18n="mission_title">
-          Our Mission
-        </h2>
-        <div class="mission-content">
-          <div class="mission-video" data-aos="zoom-in">
-            <div class="video-placeholder">
-              <img
-                src="assets/images/about/video-thumbnail.jpg"
-                alt="GānCuju demonstration"
-                data-i18n-alt="mission_video_alt"
-              />
-              <div class="play-button" id="playVideoBtn">
-                <i class="fas fa-play"></i>
-              </div>
-            </div>
-          </div>
-          <div class="mission-text" data-aos="fade-up">
-            <p data-i18n="mission_p1">
-              GānCuju™️©️ is a philosophy that spans time and cultures,
-              connecting people through sport. Our goal is to promote Chinese
-              culture and language through sports, and to make the traditional
-              Chinese sports game widely known.
-            </p>
-            <p data-i18n="mission_p2">
-              We know that the concept we have created will make Cuju known and
-              attractive throughout the world through our various sporting
-              events, trainings, and competitions. These games are not only
-              entertaining but help preserve and pass on ancient Chinese
-              football traditions to future generations.
-            </p>
-          </div>
-          <div class="mission-counter" data-aos="fade-up">
-            <div class="counter-item">
-              <span class="counter" data-count="4000">0</span>
-              <span>+</span>
-              <p data-i18n="counter_years">Years of history</p>
-            </div>
-            <div class="counter-item">
-              <span class="counter" data-count="34">0</span>
-              <p data-i18n="counter_variations">Sports equipment variations</p>
-            </div>
-            <div class="counter-item">
-              <span class="counter" data-count="8">0</span>
-              <p data-i18n="counter_levels">Training levels</p>
-            </div>
           </div>
         </div>
       </div>
@@ -426,160 +433,9 @@
       </div>
     </section>
 
-    <!-- Training System szekció javítása -->
-    <style>
-      /* Training System szekció stílusai */
-      .training {
-        background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
-        padding: 80px 0;
-      }
-
-      .level-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        margin-top: 60px;
-      }
-
-      .level-list {
-        flex: 1;
-        min-width: 320px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .level {
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-        border-radius: 8px;
-        padding: 15px 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        position: relative;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        justify-content: space-between;
-      }
-
-      .level:hover {
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        transform: translateY(-3px);
-      }
-
-      .level-content {
-        display: flex;
-        align-items: center;
-      }
-
-      .level-title {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      .level-badge {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        color: white;
-        margin-left: 15px;
-      }
-
-      .level-details {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 20px;
-        margin-top: -5px;
-        border-radius: 0 0 8px 8px;
-        transition: all 0.3s ease;
-        background-color: #ffffff;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        position: relative;
-        z-index: -1;
-      }
-
-      .level:hover + .level-details,
-      .level-details:hover {
-        max-height: 100px;
-        padding: 15px 20px;
-        margin-top: -10px;
-        z-index: 1;
-      }
-
-      .level-info {
-        flex: 1;
-        min-width: 300px;
-      }
-
-      .level-info h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: #343a40;
-      }
-
-      .level-info p {
-        margin-bottom: 20px;
-        color: #495057;
-      }
-
-      /* Szintjelölő badge színek */
-      .badge-8 {
-        background-color: #cc0000;
-      } /* Grand Master */
-      .badge-7 {
-        background-color: #000000;
-      } /* Master */
-      .badge-6 {
-        background-color: #222222;
-      } /* Master Candidate */
-      .badge-5 {
-        background-color: #8b4513;
-      } /* Expert */
-      .badge-4 {
-        background-color: #0066cc;
-      } /* Advanced */
-      .badge-3 {
-        background-color: #009900;
-      } /* Intermediate */
-      .badge-2 {
-        background-color: #ffcc00;
-        color: #000;
-      } /* Advanced Beginner */
-      .badge-1 {
-        background-color: #ffffff;
-        color: #000;
-        border: 1px solid #ccc;
-      } /* Beginner */
-
-      .cta-journey {
-        background: linear-gradient(135deg, #fd7e14 0%, #e83e8c 100%);
-        color: #ffffff;
-        padding: 12px 30px;
-        border-radius: 999px;
-        font-weight: 600;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-        margin-top: 20px;
-        text-decoration: none;
-        box-shadow: 0 8px 15px rgba(229, 9, 20, 0.3);
-      }
-
-      .cta-journey:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 25px rgba(229, 9, 20, 0.4);
-        filter: brightness(1.1);
-      }
-    </style>
-
-    <section id="training" class="training section">
+    <!-- Training System Section (including Science part) -->
+    <!-- Training System Section egymás melletti elrendezéssel -->
+    <section id="training" class="training-system">
       <div class="container">
         <h2 class="section-title" data-i18n="training_title">
           8-Level Training System
@@ -587,337 +443,315 @@
         <p class="section-subtitle" data-i18n="training_subtitle">
           Master-apprentice tradition with structured progression path
         </p>
-        <div class="training-content">
-          <div class="level-hierarchy">
-            <!-- 8. szint - Grand Master -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_8_title">Grand Master</h3>
-                <span class="level-badge" style="background-color: #cc0000"
-                  >8</span
-                >
-              </div>
-              <div class="level-description">
-                <p data-i18n="level_8_desc">
-                  Innovation capability, guiding role in developing the sport
-                </p>
-              </div>
-            </div>
 
-            <!-- 7. szint - Master -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_7_title">Master</h3>
-                <span class="level-badge" style="background-color: #000000"
-                  >7</span
-                >
+        <!-- Új flexbox konténer a szintlista és info szekcióhoz -->
+        <div class="training-flex-container">
+          <!-- Bal oldali oszlop: szintlista -->
+          <div class="training-levels-column">
+            <!-- Level Timeline -->
+            <div class="level-timeline">
+              <div class="level-container level-8">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">8</div>
+                    <div class="level-name" data-i18n="level_8_title">
+                      Dragon Wisdom
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_8_desc">
+                    The Dragon Wisdom level is reached by only a few - this is
+                    the highest peak of GānCuju™️©️, where tradition and
+                    innovation unite in perfect balance. The red color
+                    symbolizes fire, passion, and imperial dignity.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_7_desc">
-                  Teaching license, methodological expertise, competitive
-                  achievements
-                </p>
-              </div>
-            </div>
 
-            <!-- 6. szint - Master Candidate -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_6_title">Master Candidate</h3>
-                <span class="level-badge" style="background-color: #222222"
-                  >6</span
-                >
+              <div class="level-container level-7">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">7</div>
+                    <div class="level-name" data-i18n="level_7_title">
+                      Keeper of Midnight
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_7_desc">
+                    The Keeper of Midnight is initiated into the deepest secrets
+                    of GānCuju™️©️. The black level symbolizes completeness and
+                    mystery - your play appears almost as art to observers.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_6_desc">
-                  Teaching foundations, competition results, advanced techniques
-                </p>
-              </div>
-            </div>
 
-            <!-- 5. szint - Expert -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_5_title">Expert</h3>
-                <span class="level-badge" style="background-color: #8b4513"
-                  >5</span
-                >
+              <div class="level-container level-6">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">6</div>
+                    <div class="level-name" data-i18n="level_6_title">
+                      Winter Moon
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_6_desc">
+                    The light of the Winter Moon illuminates even the darkest
+                    night - just as you are now able to explore and pass on the
+                    hidden dimensions of GānCuju™️©️.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_5_desc">
-                  High-level movement forms, competition tactics, mentoring
-                  beginners
-                </p>
-              </div>
-            </div>
 
-            <!-- 4. szint - Advanced -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_4_title">Advanced</h3>
-                <span class="level-badge" style="background-color: #0066cc"
-                  >4</span
-                >
+              <div class="level-container level-5">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">5</div>
+                    <div class="level-name" data-i18n="level_5_title">
+                      Strong Root
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_5_desc">
+                    At the Strong Root level, you are no longer just a player -
+                    you become a guardian of tradition.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_4_desc">
-                  Advanced techniques, understanding of tactics, competition
-                  experience
-                </p>
-              </div>
-            </div>
 
-            <!-- 3. szint - Intermediate -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_3_title">Intermediate</h3>
-                <span class="level-badge" style="background-color: #009900"
-                  >3</span
-                >
+              <div class="level-container level-4">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">4</div>
+                    <div class="level-name" data-i18n="level_4_title">
+                      Celestial River
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_4_desc">
+                    At the Celestial River level, your play becomes fluid and
+                    unpredictable, like the flow of the great Chinese rivers.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_3_desc">
-                  Complex movements, basic strategies, technical proficiency
-                </p>
-              </div>
-            </div>
 
-            <!-- 2. szint - Advanced Beginner -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_2_title">Advanced Beginner</h3>
-                <span
-                  class="level-badge"
-                  style="background-color: #ffcc00; color: #000"
-                  >2</span
-                >
+              <div class="level-container level-3">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">3</div>
+                    <div class="level-name" data-i18n="level_3_title">
+                      Flexible Reed
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_3_desc">
+                    The green level is the level of vitality and adaptability.
+                    Like a reed dancing in the wind, your body and mind learn to
+                    flow in the game.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_2_desc">
-                  Mastery of basic techniques, introduction to tactics
-                </p>
-              </div>
-            </div>
 
-            <!-- 1. szint - Beginner -->
-            <div class="level-item" onclick="toggleDetails(this)">
-              <div class="level-header">
-                <h3 data-i18n="level_1_title">Beginner</h3>
-                <span
-                  class="level-badge"
-                  style="
-                    background-color: #ffffff;
-                    color: #000;
-                    border: 1px solid #ccc;
-                  "
-                  >1</span
-                >
+              <div class="level-container level-2">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">2</div>
+                    <div class="level-name" data-i18n="level_2_title">
+                      Morning Dew
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_2_desc">
+                    Like morning dew refreshing the bamboo forest, the yellow
+                    level brings new energy to your abilities.
+                  </div>
+                </div>
               </div>
-              <div class="level-description">
-                <p data-i18n="level_1_desc">
-                  Basic movements, rules familiarization, foundation building
-                </p>
+
+              <div class="level-container level-1">
+                <div class="level-content">
+                  <div class="level-title">
+                    <div class="level-number">1</div>
+                    <div class="level-name" data-i18n="level_1_title">
+                      Bamboo Disciple
+                    </div>
+                  </div>
+                  <div class="level-desc" data-i18n="level_1_desc">
+                    The Bamboo Disciple's journey begins with the first lesson
+                    in flexibility. Just as young bamboo bends but doesn't
+                    break, so the beginner learns the basics of GānCuju™️©️.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="training-info">
-            <h3 data-i18n="training_master_title">
-              Master-Apprentice Tradition
-            </h3>
-            <p data-i18n="training_master_desc">
-              Similar to traditional Chinese martial arts, GānCuju™️©️ follows a
-              structured master-apprentice system. Each level requires dedicated
-              practice and assessment by higher-level masters.
-            </p>
+          <!-- Jobb oldali oszlop: training info -->
+          <div class="training-info-column">
+            <div class="training-info">
+              <h3 data-i18n="training_master_title">
+                Master-Apprentice Tradition
+              </h3>
+              <p data-i18n="training_master_desc">
+                Similar to traditional Chinese martial arts, GānCuju™️©️ follows
+                a structured master-apprentice system. Each level requires
+                dedicated practice and assessment by higher-level masters.
+              </p>
 
-            <h3 data-i18n="training_skills_title">Skills Development</h3>
-            <p data-i18n="training_skills_desc">
-              As you progress through the levels, you'll develop not only
-              technical skills but also coaching abilities, strategic thinking,
-              and cultural understanding of the ancient Chinese traditions.
-            </p>
+              <h3 data-i18n="training_skills_title">Skills Development</h3>
+              <p data-i18n="training_skills_desc">
+                As you progress through the levels, you'll develop not only
+                technical skills but also coaching abilities, strategic
+                thinking, and cultural understanding of the ancient Chinese
+                traditions.
+              </p>
 
-            <a href="#contact" class="cta-button" data-i18n="training_join"
-              >Start Your Journey!</a
-            >
+              <a href="#contact" class="cta-button" data-i18n="training_join">
+                Start Your Journey!
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <script>
-      function toggleDetails(element) {
-        const description = element.querySelector(".level-description");
-
-        // Minden más leírás elrejtése
-        document.querySelectorAll(".level-description").forEach((desc) => {
-          if (desc !== description) {
-            desc.style.display = "none";
-          }
-        });
-
-        // A kiválasztott elem megjelenítése vagy elrejtése
-        if (description.style.display === "block") {
-          description.style.display = "none";
-        } else {
-          description.style.display = "block";
-        }
-      }
-
-      // A lap betöltésekor automatikusan a legmagasabb szint részleteinek megjelenítése
-      document.addEventListener("DOMContentLoaded", function () {
-        const firstLevel = document.querySelector(".level-item");
-        if (firstLevel) {
-          const description = firstLevel.querySelector(".level-description");
-          if (description) {
-            description.style.display = "block";
-          }
-        }
-      });
-    </script>
-
-    <section id="science" class="science section">
+    <!-- ITT KEZDŐDIK AZ ÚJ, RESZPONZÍV SCIENCE SZEKCIÓ -->
+    <div class="science-container">
       <div class="container">
-        <h2 class="section-title" data-i18n="science_title">
-          The Science of Skin Perception
-        </h2>
-        <p class="section-subtitle" data-i18n="science_subtitle">
+        <h2 data-i18n="science_title">The Science of Skin Perception</h2>
+        <p class="science-subtitle" data-i18n="science_subtitle">
           How GānCuju™️©️ develops superior reflexes and reaction time
         </p>
 
-        <div class="reflex-comparison">
-          <!-- Vizuális reflex oszlop -->
-          <div class="reflex-column visual-reflex">
-            <div class="reflex-header">
-              <div class="reflex-icon">
-                <i class="fas fa-eye"></i>
-              </div>
-              <h3 data-i18n="science_visual">Visual Reflex</h3>
+        <!-- Visual Reflex Section -->
+        <div class="reflex-section">
+          <div class="reflex-header">
+            <div class="reflex-icon">
+              <i class="fas fa-eye"></i>
             </div>
-
-            <div class="reflex-path">
-              <div class="path-item" data-i18n="science_visual_path_1">
-                Retina
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_2">
-                Optic Nerve
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_3">
-                Brain Processing
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_4">
-                Motor Cortex
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_5">
-                Spinal Cord
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_6">
-                Peripheral Nerve
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_visual_path_7">
-                Muscle Response
-              </div>
+            <div class="reflex-title" data-i18n="science_visual">
+              Visual Reflex
             </div>
-
             <div class="reflex-info">
               <div class="reflex-time">
                 ~200-300 <span data-i18n="science_time_unit">milliseconds</span>
               </div>
-              <div class="neural-connections" data-i18n="science_visual_desc">
+              <div class="connections-info" data-i18n="science_visual_desc">
                 7 neural connections required
               </div>
             </div>
           </div>
 
-          <!-- Taktilis reflex oszlop -->
-          <div class="reflex-column tactile-reflex">
-            <div class="reflex-header">
-              <div class="reflex-icon">
-                <i class="fas fa-hand-paper"></i>
-              </div>
-              <h3 data-i18n="science_tactile">Tactile Reflex</h3>
+          <div class="reflex-pathway">
+            <div class="pathway-item" data-i18n="science_visual_path_1">
+              Retina
             </div>
-
-            <div class="reflex-path">
-              <div class="path-item" data-i18n="science_tactile_path_1">
-                Skin Receptors
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_tactile_path_2">
-                Spinal Cord
-              </div>
-              <div class="path-arrow"><i class="fas fa-arrow-down"></i></div>
-              <div class="path-item" data-i18n="science_tactile_path_3">
-                Muscle Response
-              </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_2">
+              Optic Nerve
             </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_3">
+              Brain Processing
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_4">
+              Motor Cortex
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_5">
+              Spinal Cord
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_6">
+              Peripheral Nerve
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_visual_path_7">
+              Muscle Response
+            </div>
+          </div>
+        </div>
 
+        <!-- Tactile Reflex Section -->
+        <div class="reflex-section tactile-section">
+          <div class="reflex-header">
+            <div class="reflex-icon">
+              <i class="fas fa-hand-paper"></i>
+            </div>
+            <div class="reflex-title" data-i18n="science_tactile">
+              Tactile Reflex
+            </div>
             <div class="reflex-info">
               <div class="reflex-time">
                 ~50-80 <span data-i18n="science_time_unit">milliseconds</span>
               </div>
-              <div class="neural-connections" data-i18n="science_tactile_desc">
+              <div class="connections-info" data-i18n="science_tactile_desc">
                 Only 2 neural connections required
               </div>
             </div>
           </div>
 
-          <!-- Magyarázó szöveg -->
-          <div class="reflex-explanation">
-            <h3 data-i18n="science_advantage">Competitive Advantage</h3>
-            <p data-i18n="science_advantage_p1">
-              GānCuju™️©️ training develops the skin-based tactile reflexes that
-              are approximately three times faster than visual reflexes. This is
-              because tactile reflexes can bypass the cerebral cortex, creating
-              a more direct pathway from stimulus to response.
-            </p>
-
-            <p data-i18n="science_advantage_p2">
-              As players become more experienced, their reliance on visual
-              processing decreases, and the tactile reflexes become more
-              dominant, significantly reducing reaction times and improving
-              performance.
-            </p>
-
-            <h3 data-i18n="science_receptors">Multiple Receptor Types</h3>
-            <p data-i18n="science_receptors_p1">
-              The skin contains various receptors that detect touch, pressure,
-              vibration, and tension. During GānCuju™️©️ training, these
-              receptors become increasingly sensitive, allowing players to:
-            </p>
-
-            <ul class="benefit-list">
-              <li data-i18n="science_receptors_li1">
-                <i class="fas fa-check"></i> Determine ball direction and speed
-                through touch alone
-              </li>
-              <li data-i18n="science_receptors_li2">
-                <i class="fas fa-check"></i> React to minimal contact instantly
-              </li>
-              <li data-i18n="science_receptors_li3">
-                <i class="fas fa-check"></i> Develop proprioception (body
-                position awareness)
-              </li>
-              <li data-i18n="science_receptors_li4">
-                <i class="fas fa-check"></i> Enhance coordination between limbs
-              </li>
-            </ul>
+          <div class="reflex-pathway">
+            <div class="pathway-item" data-i18n="science_tactile_path_1">
+              Skin Receptors
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_tactile_path_2">
+              Spinal Cord
+            </div>
+            <div class="pathway-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pathway-item" data-i18n="science_tactile_path_3">
+              Muscle Response
+            </div>
           </div>
         </div>
 
-        <!-- Training Progression sekció -->
-        <div class="training-progression">
-          <h3 data-i18n="science_progression">Training Progression</h3>
+        <!-- Competitive Advantage Section -->
+        <div class="advantage-box">
+          <h3 class="advantage-title" data-i18n="science_advantage">
+            Competitive Advantage
+          </h3>
+          <p class="advantage-text" data-i18n="science_advantage_p1">
+            GānCuju™️©️ training develops the skin-based tactile reflexes that
+            are approximately three times faster than visual reflexes. This is
+            because tactile reflexes can bypass the cerebral cortex, creating a
+            more direct pathway from stimulus to response.
+          </p>
+          <p class="advantage-text" data-i18n="science_advantage_p2">
+            As players become more experienced, their reliance on visual
+            processing decreases, and the tactile reflexes become more dominant,
+            significantly reducing reaction times and improving performance.
+          </p>
+        </div>
 
-          <div class="progression-steps">
-            <div class="progression-step">
+        <!-- Multiple Receptor Types Section -->
+        <div class="receptor-box">
+          <h3 class="receptor-title" data-i18n="science_receptors">
+            Multiple Receptor Types
+          </h3>
+          <p class="receptor-text" data-i18n="science_receptors_p1">
+            The skin contains various receptors that detect touch, pressure,
+            vibration, and tension. During GānCuju™️©️ training, these receptors
+            become increasingly sensitive, allowing players to:
+          </p>
+          <ul class="receptor-list">
+            <li data-i18n="science_receptors_li1">
+              <i class="fas fa-check"></i> Determine ball direction and speed
+              through touch alone
+            </li>
+            <li data-i18n="science_receptors_li2">
+              <i class="fas fa-check"></i> React to minimal contact instantly
+            </li>
+            <li data-i18n="science_receptors_li3">
+              <i class="fas fa-check"></i> Develop proprioception (body position
+              awareness)
+            </li>
+            <li data-i18n="science_receptors_li4">
+              <i class="fas fa-check"></i> Enhance coordination between limbs
+            </li>
+          </ul>
+        </div>
+
+        <!-- Training Progression Section -->
+        <div class="training-progress">
+          <h3 class="progress-title" data-i18n="science_progression">
+            Training Progression
+          </h3>
+          <div class="progress-steps">
+            <div class="progress-step">
               <div class="step-number">1</div>
               <div class="step-content">
                 <h4 data-i18n="science_step1_title">Conscious Processing</h4>
@@ -926,10 +760,7 @@
                 </p>
               </div>
             </div>
-
-            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-
-            <div class="progression-step">
+            <div class="progress-step">
               <div class="step-number">2</div>
               <div class="step-content">
                 <h4 data-i18n="science_step2_title">Practice</h4>
@@ -938,10 +769,7 @@
                 </p>
               </div>
             </div>
-
-            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-
-            <div class="progression-step">
+            <div class="progress-step">
               <div class="step-number">3</div>
               <div class="step-content">
                 <h4 data-i18n="science_step3_title">Reduction</h4>
@@ -950,10 +778,7 @@
                 </p>
               </div>
             </div>
-
-            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-
-            <div class="progression-step">
+            <div class="progress-step">
               <div class="step-number">4</div>
               <div class="step-content">
                 <h4 data-i18n="science_step4_title">Automation</h4>
@@ -965,225 +790,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- CSS a Science szekcióhoz -->
-    <style>
-      .science {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-        color: white;
-        padding: 80px 0;
-      }
-
-      .science .section-title,
-      .science .section-subtitle {
-        color: white;
-        text-align: center;
-      }
-
-      .science .section-subtitle {
-        max-width: 800px;
-        margin: 0 auto 60px;
-        opacity: 0.9;
-      }
-
-      .reflex-comparison {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin-bottom: 60px;
-      }
-
-      .reflex-column {
-        flex: 1;
-        min-width: 250px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .reflex-header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .reflex-icon {
-        width: 60px;
-        height: 60px;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 15px;
-      }
-
-      .reflex-icon i {
-        font-size: 28px;
-      }
-
-      .reflex-header h3 {
-        font-size: 22px;
-        margin: 0;
-      }
-
-      .reflex-path {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .path-item {
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 10px 15px;
-        border-radius: 5px;
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
-      }
-
-      .path-arrow {
-        font-size: 16px;
-        opacity: 0.7;
-      }
-
-      .reflex-info {
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      .reflex-time {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 5px;
-      }
-
-      .reflex-time span {
-        font-size: 14px;
-        font-weight: 400;
-        margin-left: 5px;
-      }
-
-      .neural-connections {
-        font-size: 14px;
-        opacity: 0.9;
-      }
-
-      .reflex-explanation {
-        flex: 2;
-        min-width: 300px;
-      }
-
-      .reflex-explanation h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: white;
-      }
-
-      .reflex-explanation p {
-        margin-bottom: 20px;
-        line-height: 1.6;
-        opacity: 0.9;
-      }
-
-      .benefit-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .benefit-list li {
-        margin-bottom: 10px;
-        padding-left: 30px;
-        position: relative;
-      }
-
-      .benefit-list li i {
-        position: absolute;
-        left: 0;
-        top: 3px;
-      }
-
-      .training-progression {
-        text-align: center;
-      }
-
-      .training-progression h3 {
-        font-size: 28px;
-        margin-bottom: 30px;
-      }
-
-      .progression-steps {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .progression-step {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 20px;
-        width: 200px;
-        text-align: center;
-      }
-
-      .step-number {
-        width: 36px;
-        height: 36px;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 15px;
-        font-weight: 700;
-        font-size: 18px;
-      }
-
-      .step-content h4 {
-        margin: 0 0 10px;
-        font-size: 18px;
-      }
-
-      .step-content p {
-        margin: 0;
-        font-size: 14px;
-        opacity: 0.9;
-      }
-
-      .step-arrow {
-        font-size: 24px;
-        opacity: 0.7;
-      }
-
-      /* Mobilra optimalizálás */
-      @media (max-width: 768px) {
-        .reflex-comparison {
-          flex-direction: column;
-        }
-
-        .progression-steps {
-          flex-direction: column;
-        }
-
-        .step-arrow {
-          transform: rotate(90deg);
-        }
-
-        .progression-step {
-          width: 100%;
-          max-width: 300px;
-        }
-      }
-    </style>
-
-    <!-- A Philosophy szekciót teljesen lezárjuk és külön egységben tartjuk -->
+    </div>
+    <!-- Philosophy Section -->
     <section id="philosophy" class="philosophy section">
       <div class="container">
         <h2
@@ -1294,7 +902,7 @@
       </div>
     </section>
 
-    <!-- Külön szekcióban a Products rész -->
+    <!-- Products Section (összevont, egyetlen verzió) -->
     <section id="products" class="products section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up" data-i18n="products_title">
@@ -1324,40 +932,7 @@
             </div>
           </div>
 
-          <!-- További product slide-ok... -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Section -->
-    <section id="products" class="products section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up" data-i18n="products_title">
-          GānCuju™️© Product Family
-        </h2>
-
-        <div class="products-slider" data-aos="fade-up">
-          <div class="product-slide active">
-            <div class="product-image">
-              <img
-                src="assets/images/products/gancuju-sport.jpg"
-                alt="GānCuju™️©️"
-                data-i18n-alt="product1_image_alt"
-              />
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product1_title">GānCuju™️©️ Competitive Sport</h3>
-              <p data-i18n="product1_text">
-                Modern adaptation of ancient Chinese football. Organization of
-                international competitions and championships.
-              </p>
-              <a href="#" class="product-link">
-                <span data-i18n="product_details">Details</span>
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
+          <!-- Gānball™️ slide -->
           <div class="product-slide">
             <div class="product-image">
               <img
@@ -1395,6 +970,7 @@
             </div>
           </div>
 
+          <!-- Lion Football Academy slide -->
           <div class="product-slide">
             <div class="product-image">
               <img
@@ -1416,6 +992,7 @@
             </div>
           </div>
 
+          <!-- Ganball Games™️ slide -->
           <div class="product-slide">
             <div class="product-image">
               <img
@@ -1606,20 +1183,18 @@
                     >Competition</a
                   >
                 </li>
-                <li><a href="#mission" data-i18n="nav_mission">Mission</a></li>
-                <li>
-                  <a href="#features" data-i18n="nav_features">Features</a>
-                </li>
                 <li>
                   <a href="#training" data-i18n="nav_training"
                     >Training System</a
                   >
                 </li>
-                <li><a href="#science" data-i18n="nav_science">Science</a></li>
                 <li>
                   <a href="#philosophy" data-i18n="nav_philosophy"
                     >Philosophy</a
                   >
+                </li>
+                <li>
+                  <a href="#contact" data-i18n="nav_contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -1679,41 +1254,9 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/language-manager.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- Videó kezelő script -->
-    <script>
-      // Videó modál kezelése
-      const videoModal = document.getElementById("videoModal");
-      const playVideoBtn = document.getElementById("playVideoBtn");
-      const closeModal = document.querySelector(".close-modal");
-      const videoPlayer = document.getElementById("videoPlayer");
-
-      // Modál megnyitása videó lejátszáshoz
-      if (playVideoBtn) {
-        playVideoBtn.onclick = function () {
-          videoModal.style.display = "flex";
-          videoPlayer.play();
-        };
-      }
-
-      // Modál bezárása
-      if (closeModal) {
-        closeModal.onclick = function () {
-          videoModal.style.display = "none";
-          videoPlayer.pause();
-        };
-      }
-
-      // Modál bezárása kattintásra a háttéren
-      window.onclick = function (event) {
-        if (event.target == videoModal) {
-          videoModal.style.display = "none";
-          videoPlayer.pause();
-        }
-      };
-    </script>
   </body>
 </html>

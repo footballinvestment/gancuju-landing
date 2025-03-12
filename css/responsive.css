@@ -66,16 +66,22 @@ video {
     right: 0;
   }
 
-  /* Language selector position adjustment on mobile */
-  .language-selector {
-    position: absolute;
-    top: 15px;
-    right: 60px;
-  }
-
   /* Hero section modification on mobile */
   .hero-content {
     padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-logo {
+    width: 100px;
+    height: 100px;
   }
 
   /* Competition section adjustments */
@@ -91,9 +97,14 @@ video {
     min-width: 100%;
   }
 
+  .competition-categories {
+    flex-direction: column;
+  }
+
   /* Training system adjustments */
-  .level-pyramid {
-    padding: 0 15px;
+  .level-container {
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 
   /* Science section adjustments */
@@ -105,12 +116,19 @@ video {
     margin-bottom: 20px;
   }
 
-  .training-progression .progression-steps {
-    flex-direction: column;
+  .reflex-header {
+    flex-wrap: wrap;
   }
 
-  .step {
+  .reflex-info {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
     width: 100%;
+  }
+
+  .progress-steps {
+    grid-template-columns: 1fr;
   }
 
   .step-arrow {
@@ -122,18 +140,32 @@ video {
     gap: 15px;
   }
 
+  .card {
+    height: 280px;
+  }
+
   /* Product slider modifications */
   .product-slide {
     flex-direction: column;
+    height: auto;
+  }
+
+  .product-slide.active {
+    position: relative;
   }
 
   .product-image {
     margin-bottom: 20px;
+    max-width: 100%;
   }
 
   .ganball-features {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .products-slider {
+    height: auto;
   }
 
   /* Contact form mobile adjustment */
@@ -146,20 +178,50 @@ video {
     width: 100%;
     margin-bottom: 30px;
   }
+
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  .legal-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 /* Tablets */
 @media screen and (min-width: 577px) and (max-width: 991px) {
-  /* Language selector adjustment on tablets */
-  .language-selector {
-    top: 15px;
-    right: 60px;
+  /* Product slider tablet view */
+  .product-slide {
+    height: auto;
   }
 
-  /* Product slider tablet view */
+  .product-slide.active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
   .product-image {
     max-width: 300px;
     margin: 0 auto 20px;
+  }
+
+  .products-slider {
+    height: auto;
   }
 
   /* Competition features adjustments */
@@ -171,9 +233,14 @@ video {
     min-width: 45%;
   }
 
+  .competition-categories {
+    flex-wrap: wrap;
+  }
+
   /* Training system adjustments */
-  .level-pyramid {
-    padding: 0 20px;
+  .level-container {
+    width: calc(100% - 20px) !important;
+    margin-left: 20px !important;
   }
 
   /* Science section adjustments */
@@ -181,18 +248,37 @@ video {
     gap: 15px;
   }
 
-  .progression-steps {
-    flex-wrap: wrap;
+  .progress-steps {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .step {
-    width: 45%;
-    margin-bottom: 15px;
+  /* Philosophy cards */
+  .philosophy-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Footer adjustments */
   .footer-links {
     gap: 30px;
+  }
+
+  /* Tab navigation */
+  .tabs-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab-button {
+    margin-bottom: 10px;
+  }
+
+  .tab-pane.active {
+    flex-direction: column;
+  }
+
+  .tab-image {
+    order: -1;
+    margin-bottom: 20px;
   }
 }
 
@@ -217,6 +303,34 @@ video {
     box-shadow: none;
     overflow: visible;
   }
+
+  /* Tab panel orientation */
+  .tab-pane.active {
+    flex-direction: row;
+  }
+
+  /* Philosophy cards layout */
+  .philosophy-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large desktop screens */
+@media screen and (min-width: 1440px) {
+  :root {
+    --spacing-xl: 8rem;
+    --spacing-lg: 5rem;
+    --font-size-hero: 4rem;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero-logo {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Print styles */
@@ -231,7 +345,7 @@ video {
   .back-to-top,
   .language-selector,
   .competition-features,
-  .level-pyramid,
+  .level-timeline,
   .training-progression,
   .philosophy-cards {
     display: none !important;

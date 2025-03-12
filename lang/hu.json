@@ -23,6 +23,7 @@
   "about_feature2": "könnyen hordozható legyen",
   "about_feature3": "robosztus és strapabíró legyen",
   "about_p3": "Erre a legjobb megoldást a kínai bambusz szolgáltatta. A bambusz rugalmassága és szilárdsága tökéletesen szimbolizálta a GānCuju™️©️ szellemiségét: hajlékony, de ellenálló, éppúgy, ahogyan a játékosok is megtanultak alkalmazkodni a különböző helyzetekhez, miközben megőrizték saját erősségeiket.",
+  "about_global_reach": "A GānCuju™️©️ már 16+ nyelven elérhető, így valóban globális minden kontinensen. Küldetésünk, hogy megosszuk ezt az ősi sportágat az egész világgal, lebontva a nyelvi korlátokat és egyesítve az embereket a sport egyetemes nyelvén keresztül.",
 
   "competition_title": "GānCuju™️©️ Versenysport",
   "competition_subtitle": "Élvezd az izgalmakat, amelyeket ez az ősi gyökerekkel rendelkező professzionális versenysport nyújt",
@@ -109,6 +110,17 @@
   "science_step3_desc": "Az idegi útvonal rövidebbé és hatékonyabbá válik",
   "science_step4_title": "Automatizálás",
   "science_step4_desc": "A reflexek automatikussá válnak, megkerülve az agykérget",
+  "science_visual_path_1": "Retina",
+  "science_visual_path_2": "Látóideg",
+  "science_visual_path_3": "Agyi feldolgozás",
+  "science_visual_path_4": "Motoros kéreg",
+  "science_visual_path_5": "Gerincvelő",
+  "science_visual_path_6": "Perifériás ideg",
+  "science_visual_path_7": "Izom válasz",
+  "science_tactile_path_1": "Bőr receptorok",
+  "science_tactile_path_2": "Gerincvelő",
+  "science_tactile_path_3": "Izom válasz",
+  "science_time_unit": "ezredmásodperc",
 
   "philosophy_title": "A GānCuju™️©️ Filozófia",
   "philosophy_subtitle": "Etikett szabályok és játékszabályzok, amik az élet egyéb területein is segítik az érvényesülést",
@@ -159,16 +171,30 @@
   "footer_support": "Támogatás",
   "footer_copyright": "Minden jog fenntartva",
   "footer_privacy": "Adatvédelmi irányelvek",
-  "footer_terms": "Felhasználási feltételek",
-  "science_visual_path_1": "Retina",
-  "science_visual_path_2": "Látóideg",
-  "science_visual_path_3": "Agyi feldolgozás",
-  "science_visual_path_4": "Motoros kéreg",
-  "science_visual_path_5": "Gerincvelő",
-  "science_visual_path_6": "Perifériás ideg",
-  "science_visual_path_7": "Izom válasz",
-  "science_tactile_path_1": "Bőr receptorok",
-  "science_tactile_path_2": "Gerincvelő",
-  "science_tactile_path_3": "Izom válasz",
-  "science_time_unit": "ezredmásodperc"
+  "footer_terms": "Felhasználási feltételek"
+}
+{
+  "level_8_title": "Sárkány Bölcsesség",
+  "level_8_desc": "A Sárkány Bölcsesség szintjére csak kevesen jutnak el – ez a GānCuju™️©️ legmagasabb csúcsa, ahol a tradíció és innováció tökéletes egyensúlyban egyesül. A vörös szín a tüzet, a szenvedélyt és a császári méltóságot jelképezi. Ezen a szinten már nem csak követed, hanem alakítod is a hagyományokat, olyan mély megértéssel, amely csak a legkiválóbbak számára elérhető. A sárkány az ősi Kínában az isteni erő és bölcsesség megtestesülése volt – csakúgy, mint te a GānCuju™️©️ világában. A Nagymesteri szinten már nem csak sportot gyakorolsz – élő legendává válsz, akinek példája és tanítása generációkon át inspirálja majd a követőket.",
+  
+  "level_7_title": "Éjfél Őrzője",
+  "level_7_desc": "Az Éjfél Őrzője beavatást nyer a GānCuju™️©️ legmélyebb titkaiba. A fekete szint a teljességet és a misztériumot jelképezi – játékod már a megfigyelők számára szinte művészetnek tűnik. Módszertani szakértelmed évezredes tudást ötvöz modern tudományos ismeretekkel, mozdulataid tökéletesek, reakcióid emberfelettinek tűnnek. Az ősi szövegek szerint: 'Amikor a Mester játszik, a bambusz is meghajol tisztelettel.' Oktatói licenszed nem csupán jogosítvány – felelősség és megtiszteltetés, hogy átadhatod a GānCuju™️©️ legmélyebb hagyományait az eljövendő generációknak.",
+  
+  "level_6_title": "Téli Hold",
+  "level_6_desc": "A Téli Hold fénye még a legsötétebb éjszakát is megvilágítja – ahogy te is képes vagy már a GānCuju™️©️ rejtett dimenzióit feltárni és továbbadni. A sötétszürke szint a kitartást és az elmélyülést jelképezi, olyan képességek birtokában vagy, amelyek egykor csak a császári udvar kiválasztottjainak voltak fenntartva. Versenyeredményeid nem csupán győzelmek, hanem a belső egyensúly és harmónia kifejeződései. Oktatásod során nem csak technikákat, hanem életfilozófiát is átadsz, amely a Konfuciánus tanítások és a sportbeli kiválóság páratlan ötvözete.",
+  
+  "level_5_title": "Erős Gyökér",
+  "level_5_desc": "Az Erős Gyökér szintjén már nem csak játékos vagy – a tradíció őrzőjévé válsz. A barna szint a föld erejét és stabilitását jelképezi, játékod gyökeret ereszt a GānCuju™️©️ legmélyebb hagyományaiban. Testeden a bőr receptorai olyan fejletté válnak, hogy a legapróbb érintésből is érzed a labda irányát és szándékát – képesség, amelyet a modern tudomány csak most kezd megérteni. Tudásodat megosztva a kezdőkkel, a 4000 éves lánc újabb szemévé válsz, összekötve a múltat a jövővel.",
+  
+  "level_4_title": "Égi Folyó",
+  "level_4_desc": "Az Égi Folyó szintjén játékod folyékonnyá és kiszámíthatatlanná válik, mint a nagy kínai folyók áramlása. Intuíciód és reflexeid felgyorsulnak, a labda már a tested kiterjesztésévé válik. A kék szint a mélységet és a bölcsességet jelképezi – itt már megérted a játék mögötti filozófiát, és reflexeid háromszor gyorsabbá válnak, mint a hagyományos sportokban. A versenyek során nem csak ellenfelet, hanem önmagadat is legyőzöd, követve az ősi tanítást: 'A legnagyobb győzelem a belső győzelem.'",
+  
+  "level_3_title": "Rugalmas Nád",
+  "level_3_desc": "A zöld szint az életerő és alkalmazkodóképesség szintje. Mint a szélben táncoló nád, tested és elméd megtanul áramlani a játékban. A komplexebb mozdulatok már nem csupán fizikai kihívások – a kezed és a labda között különleges kapcsolat alakul ki, olyan szintű érzékenységgel, amelyet csak a GānCuju™️©️ ősi gyakorlása tesz lehetővé. A technikák összefonódnak a stratégiával, a játékod pedig a hagyományos kínai harmonikus egyensúly elvét kezdi tükrözni.",
+  
+  "level_2_title": "Hajnali Harmat",
+  "level_2_desc": "Mint a hajnali harmat, amely felfrissíti a bambuszerdőt, a sárga szint új energiát hoz képességeidbe. Itt kezd el ragyogni egyéni játékstílusod, miközben elsajátítod a GānCuju™️©️ taktikai alapjait. A sárga a hajnali nap energiáját és a császári bölcsesség első sugarait jelképezi. Ezen a szinten a mozdulataid pontosabbá válnak, és megismered az ősi stratégiák első titkait, amelyek egykor a kínai hadvezérek tanításaiból eredtek.",
+  
+  "level_1_title": "Bambusz Tanítvány",
+  "level_1_desc": "A Bambusz Tanítvány útja a rugalmasság első leckéjével kezdődik. Ahogy a fiatal bambusz hajlik, de nem törik, úgy tanulja meg a kezdő a GānCuju™️©️ alapjait. Itt nemcsak mozdulatokat tanulsz, hanem egy 4000 éves tradíció első lépéseit teszed meg – egy utat, amelyet császárok és harcosok egyaránt tiszteltek. A fehér szint tisztaságot és nyitottságot jelképez, készen állva az új bölcsesség befogadására."
 }
